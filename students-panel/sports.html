@@ -1,0 +1,581 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>SSM POLYTECHNIC COLLEGE, TIRUR</title>
+<link rel="shortcut icon" href="images/ssm/log.png" />
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+ 
+  <link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		
+		
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script src="js/camera.js"></script>
+		<!--[if (gt IE 9)|!(IE)]><!-->
+	
+		<!--<![endif]-->
+	
+		<script>
+			$(document).ready(function(){
+			jQuery('#camera_wrap').camera({
+				loader: false,
+				pagination: false ,
+				minHeight: '450',
+				thumbnails: false,
+				height: '48.375%',
+				caption: true,
+				navigation: true,
+				fx: 'mosaic'
+			});
+			/*carousel*/
+			var owl=$("#owl");
+				owl.owlCarousel({
+				items : 2, //10 items above 1000px browser width
+				itemsDesktop : [995,2], //5 items between 1000px and 901px
+				itemsDesktopSmall : [767, 2], // betweem 900px and 601px
+				itemsTablet: [700, 2], //2 items between 600 and 0
+				itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+				navigation : true,
+				pagination : false
+				});
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #fff;
+  }
+  .logo-small {
+      color:  #10baeb;;
+      font-size: 70px;
+  }
+  .logo-large {
+      color: #fff;
+      font-size: 150px;
+      margin-bottom: 70px;
+      margin-top: 70px;
+  }
+ 
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+      background-color: #10baeb;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+ 
+  .panel {
+      border: 1px solid #002141; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+
+  .panel-footer .btn:hover {
+      border: 1px solid #002141;
+      background-color: #fff !important;
+      color: #002141;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: rgba(0,33,65, .5) !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #002141;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #10baeb;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+
+      font-family: Montserrat, sans-serif;
+  }
+
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #10baeb !important;
+      background-color: #fff !important;
+      border-radius: 5px !important;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;	
+      animation-duration: 1s;	
+      -webkit-animation-duration: 1s;
+      visibility: visible;			
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }	
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  /****Icons****/
+.whyus_icon{
+  border-radius: 150px;
+  color: #000;
+  display: inline-block;
+  height: 150px;  
+  text-align: center;
+  width: 150px;
+}
+.whyus_icon span{
+  display: inline-block;
+  font-size: 70px;
+  height: 100%;
+  line-height: 160px;
+  width: 100%;
+  -webkit-transition:   all 0.5s;
+  -o-transition:  all 0.5s;
+  transition:   all 0.5s;
+}
+.single_whyus_top:hover .whyus_icon span{
+  transform:scale(0.7);
+}
+.single_whyus_top>h3{
+  font-size: 18px;
+  font-weight: bold;
+}
+.single_whyus_top>p{
+  font-size: 13px;
+}
+.whyus_bottom{
+  float: left;
+  display: inline;
+  width: 100%;
+  min-height: 350px;
+  padding: 85px 0px;
+  background-image: url(img/skills_bg.html);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  -webkit-background-size: cover;
+  background-size: cover;  
+}
+.center {
+    text-align: center;
+    margin-left: 38%;
+}
+.mar_bott
+{   
+	margin-top: 18px;
+    width: 10%;
+}
+/*** rotation **/
+
+ .rotating span{
+    -webkit-transition: -webkit-transform .9s ease-in-out;
+          transition:         transform .9s ease-in-out;
+}
+
+.rotating:hover span{
+    -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+   
+}
+.blue_but
+{
+	background: #fff;
+    color: #10baeb;
+}
+  </style>
+</head>
+<body id="myPage" class="page1" data-spy="scroll" data-target=".navbar" data-offset="60">-
+
+
+ <!--<body class="page1" id="top">-->
+<!--==============================header=================================-->
+		
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <header>
+			<div id="home" class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="grid_12">
+					
+				</div>
+			</div>
+		</header>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" ></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href="#AddEvent">Add Event</a></li>
+        <li><a href="#EventRegitration">Event Regitration</a></li>
+        <li><a href="#ResultEntry">Result Entry</a></li>
+        <li><a href="#ShowResult">Show Result</a></li>
+       <!--   <li><a href="#pricing">PRICING</a></li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Container (add event Section) -->
+<div id="AddEvent" class="container-fluid text-center bg-grey">
+  <h2 style="color: #10baeb;;">Add Event</h2>
+  <div class="row slideanim">
+  <div class="col-sm-12" id="options">
+   <select name="o_sub" class="form-control center" style="width:25%">
+     <option  value="add" selected >Add Event</option>
+     <option value="Modify">Modify Event</option>
+     <option value="Delele">Delele Event</option>
+     </select>
+     <h4 style="color: #10baeb;">Event Name</h4>
+     <input type="text" class="form-control center" style="width:25%"> 
+     <h4 style="color: #10baeb;">Event Nature</h4>
+     <select name="f_sub" class="form-control center" style="width:25%">
+     <option selected>Event Nature</option>
+     <option value="Group">Group</option>
+     <option value="Individual">Individual</option>
+     </select>
+     <button class="btn btn-info mar_bott" type="submit">Submit</button>
+    </div>
+  
+ </div>
+ </div>
+<!-- Container (event registation Section) -->
+<div id="EventRegitration" class="container-fluid text-center">
+  <h2 style="color: #fff;">Event Regitration</h2>
+   <div class="row slideanim">
+    <table class="semi">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                    </tr>
+                    <tr ng-repeat="area1 in posts | filter:query">
+                        <td>{{area1.ID}}</td>
+                        <td>{{area1.Name}}</td>
+                        <td>{{area1.Phone}}</td>
+                        <td>{{area1.Email}}</td>
+                        <td>{{area1.Address}}</td>
+                    </tr>
+                </tbody>
+            </table>
+  <div class="col-sm-12" id="options">
+   <select name="o_sub" class="form-control center" style="width:25%">
+     <option  value="Register" selected >Register</option>
+     <option value="Modify">Modify</option>
+     <option value="Delele">Delele</option>
+     </select>
+     <h4 style="color: #fff;">Student ID</h4>
+     <input type="text" class="form-control center" style="width:25%"> 
+     <h4 style="color: #fff;">Student Name</h4>
+     <input type="text" class="form-control center" style="width:25%">
+     <h4 style="color: #fff;">Event Nature</h4>
+     <select name="f_sub" class="form-control center" style="width:25%">
+     <option selected>Event Nature</option>
+     <option value="Group">Group</option>
+     <option value="Individual">Individual</option>
+     </select>
+     <h4 style="color: #fff;">Select Event</h4>
+      <select name="f_sub" class="form-control center" style="width:25%">
+     <option selected>Events</option>
+     <option value=""></option>
+     </select>
+     <button class="btn btn-info mar_bott blue_but" type="submit">Submit</button>
+    </div>
+  
+ </div>
+    </div>
+    
+    <!-- Container (Result Entry Section) -->
+<div id="ResultEntry" class="container-fluid text-center bg-grey">
+  <h2 style="color: #10baeb;">Result Entry</h2>
+  <div class="row slideanim">
+  <div class="col-sm-12" id="options">
+   <select name="o_sub" class="form-control center" style="width:25%">
+     <option  value="entry" selected >Result Entry</option>
+     <option value="modify">Result Modify</option>
+     <option value="Delele">Result Delele</option>
+     </select>
+     <h4 style="color: #10baeb;">Event Name</h4>
+     <select name="f_sub" class="form-control center" style="width:25%">
+     <option selected>Events</option>
+     <option value=""></option>
+     </select> 
+     <h4 style="color: #10baeb;">First</h4>
+      <input type="text" class="form-control center" style="width:25%">
+     <h4 style="color: #10baeb;">Second</h4>
+      <input type="text" class="form-control center" style="width:25%">
+	 <h4 style="color: #10baeb;">Third</h4>
+	  <input type="text" class="form-control center" style="width:25%">
+               
+     <button class="btn btn-info mar_bott" type="submit">Submit</button>
+    </div>
+  
+ </div>
+    </div>
+    
+    <!-- Container (Result Show Section) -->
+<div id="ShowResult" class="container-fluid text-center">
+  <h2 style="color: #fff;">Show Result</h2>
+    <div class="row slideanim">
+  <div class="col-sm-12" id="options">
+     <h4 style="color: #fff;">Event Name</h4>
+     <select name="f_sub" class="form-control center" style="width:25%">
+     <option selected>Events</option>
+     <option value=""></option>
+     </select> 
+     <h4 style="color: #fff;">First</h4>
+      <input type="text" class="form-control center" style="width:25%">
+     <h4 style="color: #fff;">Second</h4>
+      <input type="text" class="form-control center" style="width:25%">
+	 <h4 style="color: #fff;">Third</h4>
+	  <input type="text" class="form-control center" style="width:25%">
+               
+     <button class="btn btn-info mar_bott blue_but" type="submit">Submit</button>
+    </div>
+  
+ </div>
+    </div>
+</div>
+
+ <footer class="bg-grey" style="text-align:center; color: white; background-color:  rgba(0,33,65);"> 
+<p style="padding-top: 10px; color: #10baeb;"><strong> SSM POLYTECHNIC COLLEGE,TIRUR. </strong></p> 
+<a href="index.jsp"><span style="color: #10baeb; font-size: 40px;" class="glyphicon glyphicon-home"></span></a>
+</footer>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<script>
+myFunction()
+{
+	var value=document.getElementByName('f_sub').value;
+	
+	}
+</script>
+
+</body>
+</html>

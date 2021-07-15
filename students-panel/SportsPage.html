@@ -1,0 +1,241 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>SSM POLYTECHNIC COLLEGE, TIRUR</title>
+<link rel="shortcut icon" href="images/ssm/log.png" />
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+ 
+ 
+  <link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/customStyle.css">
+		
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		
+		
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script src="js/camera.js"></script>
+		<script src="js/angular.min.js"></script>
+	    <script src="js/ngStorage.min.js"></script>
+		<script src="js/ngStorage.js"></script>
+	  <script src="js/app.js"></script>
+		<!--[if (gt IE 9)|!(IE)]><!-->
+	
+		<!--<![endif]-->
+	
+		<script>
+			$(document).ready(function(){
+			jQuery('#camera_wrap').camera({
+				loader: false,
+				pagination: false ,
+				minHeight: '450',
+				thumbnails: false,
+				height: '48.375%',
+				caption: true,
+				navigation: true,
+				fx: 'mosaic'
+			});
+			/*carousel*/
+			var owl=$("#owl");
+				owl.owlCarousel({
+				items : 2, //10 items above 1000px browser width
+				itemsDesktop : [995,2], //5 items between 1000px and 901px
+				itemsDesktopSmall : [767, 2], // betweem 900px and 601px
+				itemsTablet: [700, 2], //2 items between 600 and 0
+				itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+				navigation : true,
+				pagination : false
+				});
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+		<script>
+		function showRegPage()
+		{window.location = "SportsPage.html";}
+		function showDelPage()
+		{window.location = "SportsDelete.html";}
+		function showResPage()
+		{window.location = "SportsResult.html";}
+		</script>
+ 
+</head>
+<body ng-app = "CamApp"  class="page1" data-spy="scroll" data-target=".navbar" data-offset="60">-
+
+
+ <!--<body class="page1" id="top">-->
+<!--==============================header=================================-->
+ 
+        <header>
+			<div id="home" class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="grid_12">
+					
+				</div>
+			</div>
+		</header>
+<p style="font-size: 3em; font-weight: bold; color: #fff;  z-index: 100;
+  position: absolute; margin-top: -27%; display: block; margin-left: 25%; ">Campus Activity Manager</p>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+    <img class="logo anim" alt="logo" src="images/ssm/logo1.gif"></img>
+    <p style="font-size: 2.5em; color: #fff;">Campus Activity Manager</p>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" ></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+    <li><a href="#" onclick="showRegPage()">Item Register</a></li>
+	  <li><a href="#" onclick="showDelPage()">Item Delete</a></li>
+	  <li><a href="#" onclick="showResPage()">Show Result</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center bg-grey">
+  <br>
+  	<center>
+	<div ng-controller="ShowStudItem" class="col-sm-12" style="margin-bottom:40px">
+	<h2 style="color: #10baeb;">Your Registered Items</h2>
+	<table class="area" style="width:50%">
+		<col width="250">
+		<col width="550">
+		<col width="250">
+                <tbody>
+                    <tr>
+                        <th id="one" style="width: 18%;">Name</th>
+                        <th style="width: 14%;">Event Name</th>
+                        <th style="width: 14%;">Event Nature</th>
+                    </tr>
+                    <tr ng-repeat="stud_event in student">
+                        <td style="font-weight: bold;">{{stud_event.Name}}</td>
+                        <td>{{stud_event.Event_Name}}</td>
+                        <td>{{stud_event.Event_Nature}}</td>
+                    </tr>
+                </tbody>
+            </table>
+		<center>
+    </div>
+	<div class="col-sm-12">
+	<div class="loginDiv">
+	<h2 style="color: #10baeb;">SPORTS Item Register</h2>
+	 <form name="login_form" id="login-form26" class="list"  ng-controller="SportssRegCtrl" ng-submit="submitSportsRegForm(selected,selected1)">
+			Select the Item Category
+		  <select  name="areaSelect" class="form-control center" style="width:75%;margin-bottom: 30px;" ng-model="selected" ng-change="updateList(selected)">
+					<option value="Single">Single</option>
+					<option value="Group">Group</option>
+          </select>
+			Select the Item Name
+		  <select  name="areaSelect" class="form-control center" style="width:75%;margin-bottom: 30px;" ng-model="selected1">
+                    <option value="" disabled selected>Item Name </option>  
+                    <option ng-repeat="lists in Events "  value="{{lists.Item_Name}}">{{lists.Item_Name}}</option>
+          </select>
+		  <button class="btn btn-info mar_bott" style="width:70%;" type="submit" ngClick="Submit">Register</button>
+		  <br>
+	<form>
+	</div>
+	
+    <div class="col-sm-12">
+    </div>
+      </div>
+   </div>
+</div>
+
+ <footer style="text-align:center; color: white; background-color:  rgba(0,33,65);"> 
+<p style="padding-top: 10px;"><strong> SSM POLYTECHNIC COLLEGE,TIRUR. </strong></p> 
+<a href="index.html"><span style="color: #fff; font-size: 40px;" class="glyphicon glyphicon-home"></span></a>
+</footer>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+$(document).ready(function(){
+
+    $("#signn").click(function(){
+        $("#sign").fadeIn();
+    });
+    $("#button").click(function(){
+        $("#sign").fadeOut();
+    });
+});
+
+
+</script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script>
+$('#email').focusout(function(){
+	   $('#email').filter(function(){
+	        var emil=$('#email').val();
+	        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	        if( !emailReg.test( emil ) ) {
+	             $(this).replaceWith('<input style="border-color: #a94442;" class="form-control" id="email" name="email" placeholder="Not Valid Email Address" type="email" required>');
+	        } else {
+	             $(this).replaceWith('<input style="border-color: #3c763d;" class="form-control" id="email" name="email" placeholder="Email Address" type="email" value='+emil+'>');
+	             
+	        }
+	  })
+	});
+
+</script>
+
+</body>
+</html>

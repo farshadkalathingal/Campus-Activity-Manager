@@ -1,0 +1,811 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+	<%@ page import="java.sql.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>SSM POLYTECHNIC COLLEGE, TIRUR</title>
+<link rel="shortcut icon" href="images/ssm/log_1.png" />
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+ 
+  <link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		
+		
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script src="js/camera.js"></script>
+		<!--[if (gt IE 9)|!(IE)]><!-->
+	
+		<!--<![endif]-->
+	
+		<script>
+			$(document).ready(function(){
+			jQuery('#camera_wrap').camera({
+				loader: false,
+				pagination: false ,
+				minHeight: '450',
+				thumbnails: false,
+				height: '48.375%',
+				caption: true,
+				navigation: true,
+				fx: 'mosaic'
+			});
+			/*carousel*/
+			var owl=$("#owl");
+				owl.owlCarousel({
+				items : 2, //10 items above 1000px browser width
+				itemsDesktop : [995,2], //5 items between 1000px and 901px
+				itemsDesktopSmall : [767, 2], // betweem 900px and 601px
+				itemsTablet: [700, 2], //2 items between 600 and 0
+				itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+				navigation : true,
+				pagination : false
+				});
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 10px;
+  }  
+  .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #fff;
+  }
+  .logo-small {
+      color:  #10baeb;;
+      font-size: 70px;
+  }
+  .logo-large {
+      color: #fff;
+      font-size: 150px;
+      margin-bottom: 70px;
+      margin-top: 70px;
+  }
+ 
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+      background-color: #10baeb;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+ 
+  .panel {
+      border: 1px solid #002141; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+
+  .panel-footer .btn:hover {
+      border: 1px solid #002141;
+      background-color: #fff !important;
+      color: #002141;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: rgba(0,33,65, .5) !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #002141;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #10baeb;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+
+      font-family: Montserrat, sans-serif;
+  }
+
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #10baeb !important;
+      background-color: #fff !important;
+      border-radius: 5px !important;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;	
+      animation-duration: 1s;	
+      -webkit-animation-duration: 1s;
+      visibility: visible;			
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }	
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  /****Icons****/
+.whyus_icon{
+  border-radius: 150px;
+  color: #000;
+  display: inline-block;
+  height: 150px;  
+  text-align: center;
+  width: 150px;
+}
+.whyus_icon span{
+  display: inline-block;
+  font-size: 70px;
+  height: 100%;
+  line-height: 160px;
+  width: 100%;
+  -webkit-transition:   all 0.5s;
+  -o-transition:  all 0.5s;
+  transition:   all 0.5s;
+}
+.single_whyus_top:hover .whyus_icon span{
+  transform:scale(0.7);
+}
+.single_whyus_top>h3{
+  font-size: 18px;
+  font-weight: bold;
+}
+.single_whyus_top>p{
+  font-size: 13px;
+}
+.whyus_bottom{
+  float: left;
+  display: inline;
+  width: 100%;
+  min-height: 350px;
+  padding: 85px 0px;
+  background-image: url(img/skills_bg.html);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  -webkit-background-size: cover;
+  background-size: cover;  
+}
+.bor {
+   border-radius: 0px;  
+}
+.mar_bott
+{   
+	margin-top: 18px;
+    width: 15%;
+    margin-bottom: 2px;
+}
+.in_line
+{
+	border-radius: 0px;
+	display: inline-block;
+    width: 93px;
+}
+/*** rotation **/
+
+ .rotating span{
+    -webkit-transition: -webkit-transform .9s ease-in-out;
+          transition:         transform .9s ease-in-out;
+}
+
+.rotating:hover span{
+    -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+   
+}
+.wid_cen
+{
+	width:50%; 
+	margin:auto;
+}
+  </style>
+</head>
+<body id="myPage" class="page1" data-spy="scroll" data-target=".navbar" data-offset="60">-
+
+
+ <!--<body class="page1" id="top">-->
+<!--==============================header=================================-->
+	
+<%try
+			{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection conn= null;
+			
+			conn =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/fb","root","");
+			
+			String ques2 ="SELECT * FROM register";
+            Statement st=conn.createStatement();
+            ResultSet rt =st.executeQuery(ques2);
+            
+%>	
+
+        <header>
+			<div id="home" class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="grid_12">
+					
+				</div>
+			</div>
+		</header>
+		
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" ></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        
+      <ul class="nav navbar-nav navbar-right">
+      
+      <li><a href="#reg">REGISTER</a></li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Container (About Section) -->
+<div  class="container-fluid text-center bg-grey">
+
+ <br>
+  <div class="row slideanim">
+  <h2>STUDENT REGISTRATION</h2>
+   <div class="col-sm-12" id="options">
+   <select name="select"  id="sele" class="form-control center wid_cen" style="width:25%; "onchange="show()">
+     <option value="Register" selected >Register</option>
+     <option value="Modify">Modify</option>
+     <option value="Delele">Delete</option>
+     </select>
+     </div>
+     <div id="reg" class="slideanim" >
+     <form action="register.action" method="post">
+     <div class="row">
+     <div class="col-sm-6">
+     <h4 style="color: #10baeb;">Register NO</h4>
+     <input type="text" name="regn" class="form-control wid_cen" placeholder="Student Id" required> 
+     </div>
+     <div class="col-sm-6">
+      <h4 style="color: #10baeb;">Student Name</h4>
+     <input type="text" name="name" class="form-control wid_cen" placeholder="Student Name" required>
+     </div>
+     </div>
+     <div class="row">
+     <div class="col-sm-6">
+     <h4 style="color: #10baeb;">DOB</h4>
+     <span style="margin:auto;">
+				<select id="day" title="Day" name="day" class="form-control in_line ">
+				<option value="1" selected>Day</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+				</select>
+				<select name="month" id="month" title="Month" class="form-control in_line" >
+				<option value="1" selected>Month</option>
+				<option value="1">Jan</option>
+				<option value="2">Feb</option>
+				<option value="3">Mar</option>
+				<option value="4">Apr</option>
+				<option value="5">May</option>
+				<option value="6">Jun</option>
+				<option value="7">Jul</option>
+				<option value="8">Aug</option>
+				<option value="9">Sept</option>
+				<option value="10">Oct</option>
+				<option value="11">Nov</option>
+				<option value="12">Dec</option>
+				</select>
+				<select name="year" id="year" title="Year" class="form-control in_line" >
+				<option value="1980" selected>Year</option>
+				<option value="2016">2016</option>
+				<option value="2015">2015</option>
+				<option value="2014">2014</option>
+				<option value="2013">2013</option>
+				<option value="2012">2012</option>
+				<option value="2011">2011</option>
+				<option value="2010">2010</option>
+				<option value="2009">2009</option>
+				<option value="2008">2008</option>
+				<option value="2007">2007</option>
+				<option value="2006">2006</option>
+				<option value="2005">2005</option>
+				<option value="2004">2004</option>
+				<option value="2003">2003</option>
+				<option value="2002">2002</option>
+				<option value="2001">2001</option>
+				<option value="2000">2000</option>
+				<option value="1999">1999</option>
+				<option value="1998">1998</option>
+				<option value="1997">1997</option>
+				<option value="1996">1996</option>
+				<option value="1995">1995</option>
+				<option value="1994">1994</option>
+				<option value="1993">1993</option>
+				<option value="1992">1992</option>
+				<option value="1991">1991</option>
+				<option value="1990">1990</option>
+				<option value="1989">1989</option>
+				<option value="1988">1988</option>
+				<option value="1987">1987</option>
+				<option value="1986">1986</option>
+				<option value="1985">1985</option>
+				<option value="1984">1984</option>
+				<option value="1983">1983</option>
+				<option value="1982">1982</option>
+				<option value="1981">1981</option>
+				<option value="1980">1980</option>
+			</select>
+				</span>
+     </div>
+     <div class="col-sm-6">
+      <h4 style="color: #10baeb;">Sex</h4>
+					<span class="wid_cen" style="margin:auto;">
+							<input type="radio" name="sex" checked value="M" >
+							<label class="radio_but">Male</label>
+						</span>
+						<span >
+							<input type="radio" name="sex" value="F">
+							<label  class="radio_but">Female</label>
+						</span>     </div>
+     </div>
+    <div class="row">
+     <div class="col-sm-6">
+     <h4 style="color: #10baeb;">Branch</h4>
+     <select name="branch" class="form-control bor wid_cen" >
+     <option  value="mech" selected>Branch</option>
+     <option value="mech">Mechanical</option>
+     <option value="civil">Civil</option>
+      <option value="comp">Computer</option>
+       <option value="elect">Electronics</option>
+        <option value="electr">Electrical</option>
+         <option value="auto">Automobile</option>
+     </select>
+     </div>
+     <div class="col-sm-6">
+      <h4 style="color: #10baeb;">Semester</h4>
+       <select name="sem" class="form-control bor wid_cen">
+     <option  value="1" selected >Semester</option>
+     <option value="1">One</option>
+     <option value="2">Two</option>
+      <option value="3">Three</option>
+       <option value="4">Four</option>
+        <option value="5">Five</option>
+         <option value="6">Six</option>
+     </select>
+     </div>
+     </div>
+     
+     <button class="btn btn-info mar_bott blue_but" type="submit" method="execute">Submit</button>
+      </form>
+      </div>
+    </div>
+ 
+ 
+<div id="modify" class="container-fluid text-center bg-grey" style="display: none;">
+  
+  <br>
+  <div class="row slideanim">
+    <form action="modify.action" method="post">
+     <div class="row">
+     <div class="col-sm-6">
+     <h4 style="color: #10baeb;">Register NO</h4>
+    <select name="reg_no" class="form-control bor wid_cen ">
+           <option  value=null selected >Register No</option>
+           <%  while(rt.next()){ %>
+           		<option value="<%= rt.getString("Reg_NO")%>"><%= rt.getString("Reg_NO")%></option>
+        	<% } %>
+         </select>
+     </div>
+     <div class="col-sm-6">
+      <h4 style="color: #10baeb;">Student Name</h4>
+     <input type="text" name="name" class="form-control wid_cen" placeholder="Student Name" required>
+     </div>
+     </div>
+     <div class="row">
+     <div class="col-sm-6">
+     <h4 style="color: #10baeb;">DOB</h4>
+     <span style="margin:auto;">
+				<select id="day" title="Day" name="day" class="form-control in_line ">
+				<option value="1" selected>Day</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+				</select>
+				<select name="month" id="month" title="Month" class="form-control in_line" >
+				<option value="1" selected>Month</option>
+				<option value="1">Jan</option>
+				<option value="2">Feb</option>
+				<option value="3">Mar</option>
+				<option value="4">Apr</option>
+				<option value="5">May</option>
+				<option value="6">Jun</option>
+				<option value="7">Jul</option>
+				<option value="8">Aug</option>
+				<option value="9">Sept</option>
+				<option value="10">Oct</option>
+				<option value="11">Nov</option>
+				<option value="12">Dec</option>
+				</select>
+				<select name="year" id="year" title="Year" class="form-control in_line" >
+				<option value="1980" selected>Year</option>
+				<option value="2016">2016</option>
+				<option value="2015">2015</option>
+				<option value="2014">2014</option>
+				<option value="2013">2013</option>
+				<option value="2012">2012</option>
+				<option value="2011">2011</option>
+				<option value="2010">2010</option>
+				<option value="2009">2009</option>
+				<option value="2008">2008</option>
+				<option value="2007">2007</option>
+				<option value="2006">2006</option>
+				<option value="2005">2005</option>
+				<option value="2004">2004</option>
+				<option value="2003">2003</option>
+				<option value="2002">2002</option>
+				<option value="2001">2001</option>
+				<option value="2000">2000</option>
+				<option value="1999">1999</option>
+				<option value="1998">1998</option>
+				<option value="1997">1997</option>
+				<option value="1996">1996</option>
+				<option value="1995">1995</option>
+				<option value="1994">1994</option>
+				<option value="1993">1993</option>
+				<option value="1992">1992</option>
+				<option value="1991">1991</option>
+				<option value="1990">1990</option>
+				<option value="1989">1989</option>
+				<option value="1988">1988</option>
+				<option value="1987">1987</option>
+				<option value="1986">1986</option>
+				<option value="1985">1985</option>
+				<option value="1984">1984</option>
+				<option value="1983">1983</option>
+				<option value="1982">1982</option>
+				<option value="1981">1981</option>
+				<option value="1980">1980</option>
+			</select>
+				</span>
+     </div>
+     <div class="col-sm-6">
+      <h4 style="color: #10baeb;">Sex</h4>
+					<span class="wid_cen" style="margin:auto;">
+							<input type="radio" name="sex" checked value="M" >
+							<label class="radio_but">Male</label>
+						</span>
+						<span >
+							<input type="radio" name="sex" value="F">
+							<label  class="radio_but">Female</label>
+						</span>     </div>
+     </div>
+    <div class="row">
+     <div class="col-sm-6">
+     <h4 style="color: #10baeb;">Branch</h4>
+     <select name="branch" class="form-control bor wid_cen" >
+     <option  value="mech" selected>Branch</option>
+     <option value="mech">Mechanical</option>
+     <option value="civil">Civil</option>
+      <option value="comp">Computer</option>
+       <option value="elect">Electronics</option>
+        <option value="electr">Electrical</option>
+         <option value="auto">Automobile</option>
+     </select>
+     </div>
+     <div class="col-sm-6">
+      <h4 style="color: #10baeb;">Semester</h4>
+       <select name="sem" class="form-control bor wid_cen">
+     <option  value="1" selected >Semester</option>
+     <option value="1">One</option>
+     <option value="2">Two</option>
+      <option value="3">Three</option>
+       <option value="4">Four</option>
+        <option value="5">Five</option>
+         <option value="6">Six</option>
+     </select>
+     </div>
+     </div>
+     
+     <button class="btn btn-info mar_bott blue_but" type="submit" method="execute">Modify</button>
+      </form>
+    </div>
+   
+ </div>
+ 
+
+<!-- Container (Info Section) -->
+<div id="dele" class="container-fluid text-center bg-grey" style="display: none;">
+ <div class="row slideanim">
+	<form action="delete.action" method="post">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 style="color: #10baeb;">Register NO</h4>
+          <select name="reg_no" class="form-control bor wid_cen "style="width:25%;">
+           <option  value=null selected >Register No</option>
+           <% 
+           		String delete ="SELECT * FROM register";
+                Statement state=conn.createStatement();
+                ResultSet del =st.executeQuery(ques2);
+           		while(del.next()){ %>
+           			<option value="<%= del.getString("Reg_NO")%>"><%= del.getString("Reg_NO")%></option>
+        		<% } %>
+         </select>
+        </div>
+        <button class="btn btn-info mar_bott blue_but" type="submit">Delete</button>
+       </div>
+      </form>
+     </div>
+</div>
+</div>
+    <!-- Left and right controls -->
+   
+
+
+ <footer style="text-align:center; color: white; background-color:  rgba(0,33,65);"> 
+<p style="padding-top: 10px; color: #fff;"><strong> SSM POLYTECHNIC COLLEGE,TIRUR. </strong></p> 
+<a href="index.jsp"><span style="color: #fff; font-size: 40px;" class="glyphicon glyphicon-home"></span></a>
+</footer>
+ <%
+			}catch(Exception e)
+{
+    System.out.println(e);
+}
+%> 
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<script type="text/javascript">
+	
+	function show()
+	{
+		var set_value= document.getElementById('sele').value;
+		var div1= document.getElementById('reg');
+		var div2= document.getElementById('modify');
+		var div3= document.getElementById('dele');
+		
+		if(set_value == "Modify")
+		{
+			div1.style.display="none";
+			div2.style.display="block";
+			div3.style.display="none";
+		}
+		if(set_value == "Register")
+		{
+			div1.style.display="block";
+			div2.style.display="none";
+			div3.style.display="none";
+		}
+		if(set_value == "Delele")
+		{
+			div1.style.display="none";
+			div2.style.display="none";
+			div3.style.display="block";
+		}
+	}
+	
+/* $("select[name=select]").change(function() {
+	if ($(this).val() == "Modify") {
+		$("#reg").css("display","none");
+    	$("#modify").css("display","block");
+    	
+    	
+    }
+	if ($(this).val() == "Delete") {
+		$("#reg").css("display","none");
+		$("#modify").css("display","none");
+		$("#delete").css("display","block");
+}
+}) */
+</script>
+
+</body>
+</html>

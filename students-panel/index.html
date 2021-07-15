@@ -1,0 +1,334 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>SSM POLYTECHNIC COLLEGE, TIRUR</title>
+<link rel="shortcut icon" href="images/ssm/log.png" />
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+ <script src="dist/sweetalert.min.js"></script>
+ 
+  <link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/customStyle.css">
+		
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		
+		
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script src="js/camera.js"></script>
+		<script src="js/angular.min.js"></script>
+	    <script src="js/ngStorage.min.js"></script>
+		<script src="js/ngStorage.js"></script>
+	  <script src="js/app.js"></script>
+		<!--[if (gt IE 9)|!(IE)]><!-->
+	
+		<!--<![endif]-->
+	
+		<script>
+			$(document).ready(function(){
+			jQuery('#camera_wrap').camera({
+				loader: false,
+				pagination: false ,
+				minHeight: '450',
+				thumbnails: false,
+				height: '48.375%',
+				caption: true,
+				navigation: true,
+				fx: 'mosaic'
+			});
+			/*carousel*/
+			var owl=$("#owl");
+				owl.owlCarousel({
+				items : 2, //10 items above 1000px browser width
+				itemsDesktop : [995,2], //5 items between 1000px and 901px
+				itemsDesktopSmall : [767, 2], // betweem 900px and 601px
+				itemsTablet: [700, 2], //2 items between 600 and 0
+				itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+				navigation : true,
+				pagination : false
+				});
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+  
+		<script>
+		function ShowAdminPanel()
+		{window.location = "http://localhost/mainproAdmin/";}
+		</script>
+ 
+</head>
+<body ng-app = "CamApp" id="myPage" class="page1" data-spy="scroll" data-target=".navbar" data-offset="60">-
+
+
+ <!--<body class="page1" id="top">-->
+<!--==============================header=================================-->
+ 
+        <header>
+			<div id="home" class="container_12">
+				<div class="grid_12">
+					<div class="menu_block">
+						
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="grid_12">
+					
+				</div>
+			</div>
+		</header>
+		<div class="slider_wrapper">
+			<div id="camera_wrap" class="">
+				<div data-src="images/ssm/templatemo_banner_slide_01.jpg">
+					
+				</div>
+				<div data-src="images/ssm/templatemo_banner_slide_02.jpg">
+					
+				</div>
+			</div>
+			 
+		</div>
+
+<center>
+<p style="font-size: 3em; font-weight: bold; color: #fff;  z-index: 100;
+  position: absolute; margin-top: -27%; display: block; margin-left: 30%; ">Campus Activity Manager</p>
+</center>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+  
+    <div class="navbar-header">
+    <img class="logo anim" alt="logo" src="images/ssm/logo1.gif"></img>
+		<p style="font-size: 2.5em; color: #fff;">Campus Activity Manager</p>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar" ></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" ng-controller ="LoginPageCtrl"  id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+      <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#info">INFO</a></li>
+       <!--   <li><a href="#pricing">PRICING</a></li>-->
+        <li><a href="#contact">CONTACT</a></li>
+
+        <li><a ng-click="LoginPage()" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">{{studName}}</a></li>
+		 <li><a href="#" onclick="ShowAdminPanel()" >ADMIN </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+  <div class="col-sm-4">
+      <img src="images/ssm/log2(2).png">
+    </div>
+    <div class="col-sm-8">
+      <h2 style="color : #ffffff;text-align: center;">SSM Polytechnic College, Tirur</h2><br>
+      
+      <p style="color: #000; font-size:16px; line-height:40px"> Seethi Sahib Memorial Polytechnic College is the premier technical institution established in the private sector by Kerala Muslim Eductional Association[KMEA]. Since its establishment in 1962, this institution has made great strides in technical proficiency and set an example for other to follow.  The standard of technical education it upholds is unparelleled. The competent faculties of this prestigious institution are the impetus behind these great achievements. The governing body consist of the representatives of the management, State Govt.,and All India Council for Technical Education(AICTE) with the Principal as Ex-officio member.		 </p>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center bg-grey">
+  <h2 style="color: #10baeb;;">SERVICES</h2>
+  
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <a href="ArtsPage.html">
+      <div class="single_whyus_top wow fadeInUp">
+      	<div class="whyus_icon"><span class="glyphicon glyphicon-music logo-small"></span></div>
+      <h4 style="color: #10baeb;">Arts</h4></a>
+      <p>Arts of college managed.</p>
+      </div>
+    </div>
+	<div class="col-sm-4">
+      <a href="library.html">
+       <div class="single_whyus_top wow fadeInUp">
+       		<div class="whyus_icon"><span class="glyphicon glyphicon-book logo-small"></span></div>
+      	<h4 style="color: #10baeb;">Library</h4></a>
+      	<p>Library details are managed.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <a href="sportsPage.html">
+      <div class="single_whyus_top wow fadeInUp">
+      	<div class="whyus_icon"><span class="glyphicon glyphicon-flag logo-small"></span></div>
+      <h4 style="color: #10baeb;">Sports</h4></a>
+      <p>Sports of college managed.</p>
+      </div>
+    </div>
+   </div>
+</div>
+
+<!-- Container (Info Section) -->
+<div id="info" class="container-fluid text-center">
+  <h2 style="color: #fff;">INFO</h2>
+  <h4 style="color: #fff;">Informations</h4>
+  <div class="row text-center slideanim">
+  
+    <div class="col-sm-4">
+      <div class="thumbnail rotating">
+      <a href="http://polyadmission.org/downloads.php"><span class="glyphicon glyphicon-user logo-smalll"></span>
+         <h4 style="color: #fff;">Admission</h4>
+        <p>Admission Details</p></a>
+      </div>
+    </div>
+    
+     
+     <div class="col-sm-4">
+      <div class="thumbnail rotating">
+      <a href="syllabus.html "><span class="glyphicon glyphicon-list-alt logo-smalll"></span>
+        <h4 style="color: #fff;">Syllabus</h4>
+        <p>Syllabus of Semester.</p></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+    <div class="thumbnail rotating">
+      <a href="Seminar.html"><span class="glyphicon glyphicon-paperclip logo-smalll"></span>
+        <h4 style="color: #fff;">Seminar Topics</h4>
+        <p>Topics for Seminar.</p></a>
+      </div>
+    </div>
+  </div><br>
+  
+  
+
+   
+    
+    </div>
+
+   
+  </div>
+</div>
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 style="color: #10baeb;" class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p> Contact with our help team</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Thekkummuri, Tirur, Malappuram, Kerala</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 0494 242 0580</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> ssmpoly@sify.com</p>
+      <p><span class="glyphicon glyphicon-globe"></span> ssmpoly.ac.in</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+	  <form name="feedbackform" ng-controller="feedbackCtrl" ng-submit="submitfeedbackForm()">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" ng-model="sname" name="sname" placeholder="Enter Your Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" ng-model="email" name="email" placeholder="Email Address" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" ng-model="cmd" name="cmd" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-info pull-right" type="submit" ngClick="Submit" >Send</button>
+        </div>
+      </div>
+	</form>
+    </div>
+  </div>
+</div>
+
+ <footer style="text-align:center; color: white; background-color:  rgba(0,33,65);"> 
+<p style="padding-top: 10px;"><strong> SSM POLYTECHNIC COLLEGE,TIRUR. </strong></p> 
+<a href="#home"><span style="color: #fff; font-size: 40px;" class="glyphicon glyphicon-home"></span></a>
+</footer>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+$(document).ready(function(){
+
+    $("#signn").click(function(){
+        $("#sign").fadeIn();
+    });
+    $("#button").click(function(){
+        $("#sign").fadeOut();
+    });
+});
+
+
+</script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script>
+$('#email').focusout(function(){
+	   $('#email').filter(function(){
+	        var emil=$('#email').val();
+	        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	        if( !emailReg.test( emil ) ) {
+	             $(this).replaceWith('<input style="border-color: #a94442;" class="form-control" id="email" name="email" placeholder="Not Valid Email Address" type="email" required>');
+	        } else {
+	             $(this).replaceWith('<input style="border-color: #3c763d;" class="form-control" id="email" name="email" placeholder="Email Address" type="email" value='+emil+'>');
+	             
+	        }
+	  })
+	});
+
+</script>
+
+</body>
+</html>
